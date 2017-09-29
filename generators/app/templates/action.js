@@ -2,10 +2,8 @@ import _ from 'lodash';
 import { MyCollection } from '/imports/collections';
 import { myLogic } from '../logic';
 
-export default ({author, documents = []}) => {
-  const subGroup = documents
-    .filter(myLogic)
-    .map(doc => [doc.person._id, doc]);
+export default ({ author, documents = [] }) => {
+  const subGroup = documents.filter(myLogic).map(doc => [doc.person._id, doc]);
 
   MyCollection.insert({
     author: {

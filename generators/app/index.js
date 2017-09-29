@@ -77,11 +77,14 @@ module.exports = class extends Generator {
 
     this.fs.copy(this.templatePath('index.js'), this.destinationPath('actions/index.js'));
     this.fs.copy(this.templatePath('action.js'), this.destinationPath('actions/whatever.js'));
+    this.fs.copy(this.templatePath('test.js'), this.destinationPath('actions/whatever.test.js'));
 
     this.fs.copy(this.templatePath('index.js'), this.destinationPath('logic/index.js'));
     this.fs.copy(this.templatePath('logic.js'), this.destinationPath('logic/whatever.js'));
+    this.fs.copy(this.templatePath('test.js'), this.destinationPath('logic/whatever.test.js'));
 
     this.fs.copy(this.templatePath('index.js'), this.destinationPath('methods/index.js'));
     this.fs.copy(this.templatePath('method.js'), this.destinationPath('methods/whatever.js'));
+    this.fs.copy(this.templatePath('test.js'), this.destinationPath('methods/whatever.test.js'));
   }
 };
